@@ -1,0 +1,50 @@
+{
+  "name": "express2.ts",
+  "version": "1.0.0",
+  "description": "Express typescript template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "npx tsc --build",
+    "start": "npx tsc --build && node dist/index.js",
+    "test": "NODE_ENV=test vitest run",
+    "test:watch": "NODE_ENV=test vitest",
+    "preinstall": "./install_psql.sh",
+    "db:create": "npx drizzle-kit create",
+    "db:migrate": "npx drizzle-kit migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voscarmv/express.ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/voscarmv/express.ts/issues"
+  },
+  "homepage": "https://github.com/voscarmv/express.ts#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.7",
+    "drizzle-orm": "^0.44.7",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.10.1",
+    "@types/pg": "^8.15.6",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
