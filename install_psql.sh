@@ -22,5 +22,5 @@ GRANT ALL PRIVILEGES ON DATABASE $DB TO $PGUSER;
 GRANT ALL ON SCHEMA public TO $PGUSER;
 EOF
 
-echo "db_url=postgres://$PGUSER:$PASS@localhost/$DB" >> .env
+echo "DB_URL=postgres://$PGUSER:$PASS@localhost/$DB" >> .env
 echo "✅ Database, user, and .env file created. Edit .env if needed."

@@ -9,7 +9,7 @@ import {
     type InferSelectModel
 } from 'drizzle-orm';
 
-const db = drizzle(process.env.DATABASE_URL!);
+const db = drizzle(process.env.DB_URL!);
 
 // Types
 export type User = InferSelectModel<typeof users>;

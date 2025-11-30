@@ -10,7 +10,7 @@
     "test": "NODE_ENV=test vitest run",
     "test:watch": "NODE_ENV=test vitest",
     "preinstall": "./install_psql.sh",
-    "db:create": "npx drizzle-kit create",
+    "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate"
   },
   "repository": {

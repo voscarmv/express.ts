@@ -2,8 +2,9 @@ import { beforeEach } from "vitest";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { users, messages } from "../src/schema.js";
 import { eq } from "drizzle-orm";
+import 'dotenv/config';
 
-const db = drizzle(process.env.DATABASE_URL!);
+const db = drizzle(process.env.DB_URL!);
 
 // Auto-cleanup tables before each test
 beforeEach(async () => {
