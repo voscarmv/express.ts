@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo 'Install PSQL (sudo apt install) and create new DB? (y/n) '
-read YN
-
-if test $YN == 'n' -o $YN == 'N' ; then
-    exit
+if ! psql --version ; then
+    sudo apt install -y postgresql postgresql-contrib
 fi
 
-sudo apt install -y postgresql postgresql-contrib
+if grep -e 'DB_URL=' ./.env ; then
+    exit
+fi
 
 read -p "Postgres username: " PGUSER
 read -s -p "Postgres password: " PASS
