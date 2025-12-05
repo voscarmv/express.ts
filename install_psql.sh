@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! psql --version ; then
-    sudo apt install -y postgresql postgresql-contrib
+    sudo apt update && sudo apt install -y postgresql postgresql-contrib
 fi
 
 if grep -e 'DB_URL=' ./.env ; then
